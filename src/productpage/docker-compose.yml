@@ -3,4 +3,4 @@ services:
     build: .
     image: ghcr.io/nattaphonmek/bookinfo-productpage:dev
     ports:
-      - "8083:8083"
+      - "8082:8083"
