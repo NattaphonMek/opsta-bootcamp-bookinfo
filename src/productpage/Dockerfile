@@ -1,7 +1,7 @@
 FROM python:3.8-bullseye
 
 WORKDIR /app
-COPY . /app
+COPY . .
 
 ARG DETAILS_HOSTNAME
 ARG RATINGS_HOSTNAME
