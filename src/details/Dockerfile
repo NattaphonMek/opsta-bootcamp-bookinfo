@@ -1,7 +1,7 @@
 FROM ruby:2.7-bullseye
 
 WORKDIR /app
-COPY . /app
+COPY . .
 
 EXPOSE 8081
 
