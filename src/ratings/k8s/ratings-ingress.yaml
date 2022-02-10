@@ -8,7 +8,7 @@ metadata:
   namespace: opsta-bootcamp
 spec:
   rules:
-  - host: XXX
+  - host: opsta.parfet.in.th
     http:
       paths:
       - path: /ratings(/|$)(.*)

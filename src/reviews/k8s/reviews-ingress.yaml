@@ -8,7 +8,7 @@ metadata:
   namespace: opsta-bootcamp
 spec:
   rules:
-  - host: 
+  - host: opsta.parfet.in.th
     http:
       paths:
       - path: /reviews(/|$)(.*)
@@ -17,4 +17,4 @@ spec:
           service:
             name: bookinfo-dev-reviews
             port:
-              number: 8080
+              number: 8082

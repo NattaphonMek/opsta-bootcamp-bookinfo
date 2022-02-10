@@ -8,7 +8,7 @@ metadata:
   namespace: opsta-bootcamp
 spec:
   rules:
-  - host: XXX
+  - host: opsta.parfet.in.th
     http:
       paths:
       - path: /productpage(/|$)(.*)
@@ -17,4 +17,4 @@ spec:
           service:
             name: bookinfo-dev-productpage
             port:
-              number: 8080
+              number: 8083
