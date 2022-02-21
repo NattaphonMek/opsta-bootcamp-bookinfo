@@ -1,20 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  {{- if .Values.ingress.annotations }}
   annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-  name: bookinfo-dev-ratings
-  namespace: opsta-bootcamp
+    {{- range $key, $value := .Values.ingress.annotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+  {{- end }}
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.ratings.namespace }}
 spec:
   rules:
-  - host: opsta.parfet.in.th
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
-      - path: /ratings(/|$)(.*)
+      - path: {{ .Values.ingress.path }}
         pathType: Prefix
         backend:
           service:
-            name: bookinfo-dev-ratings
+            name: {{ .Release.Name }}
             port:
-              number: 8080
+              number: {{ .Values.ratings.port }}
