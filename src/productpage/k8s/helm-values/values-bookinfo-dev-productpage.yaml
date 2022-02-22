@@ -14,6 +14,6 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 extraEnv:
   RATINGS_HOSTNAME: http://dev.opsta.parfet.in.th/ratings
-  DETAILS_HOSTNAME: http://dev.dev.opsta.parfet.in.th/details
+  DETAILS_HOSTNAME: http://dev.opsta.parfet.in.th/details
   REVIEWS_HOSTNAME: http://dev.opsta.parfet.in.th/reviews
   FLOOD_FACTOR: 0
