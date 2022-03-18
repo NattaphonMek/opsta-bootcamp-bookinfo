@@ -6,7 +6,7 @@ reviews:
   image: ghcr.io/nattaphonmek/bookinfo-reviews
   tag: dev
 ingress:
-  host: dev.opsta.parfet.in.th
+  host: dev.parfet.in.th
   path: "/reviews(/|$)(.*)"
   serviceType: ClusterIP
   annotations:
@@ -14,4 +14,4 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 extraEnv:
   ENABLE_RATINGS: true
-  RATINGS_SERVICE: http://dev.opsta.parfet.in.th/ratings
+  RATINGS_SERVICE: http://dev.parfet.in.th/ratings

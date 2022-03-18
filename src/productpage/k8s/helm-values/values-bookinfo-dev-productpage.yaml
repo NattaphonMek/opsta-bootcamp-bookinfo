@@ -6,14 +6,14 @@ productpage:
   image: ghcr.io/nattaphonmek/bookinfo-productpage
   tag: dev
 ingress:
-  host: dev.opsta.parfet.in.th
+  host: dev.parfet.in.th
   path: "/productpage(/|$)(.*)"
   serviceType: ClusterIP
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 extraEnv:
-  RATINGS_HOSTNAME: http://dev.opsta.parfet.in.th/ratings
-  DETAILS_HOSTNAME: http://dev.opsta.parfet.in.th/details
-  REVIEWS_HOSTNAME: http://dev.opsta.parfet.in.th/reviews
+  RATINGS_HOSTNAME: http://dev.parfet.in.th/ratings
+  DETAILS_HOSTNAME: http://dev.parfet.in.th/details
+  REVIEWS_HOSTNAME: http://dev.parfet.in.th/reviews
   FLOOD_FACTOR: 0

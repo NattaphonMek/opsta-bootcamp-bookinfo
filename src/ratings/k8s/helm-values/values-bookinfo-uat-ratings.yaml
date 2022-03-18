@@ -6,7 +6,7 @@ ratings:
   image: ghcr.io/nattaphonmek/bookinfo-ratings
   tag: uat
 ingress:
-  host: uat.opsta.parfet.in.th
+  host: uat.parfet.in.th
   path: "/ratings(/|$)(.*)"
   serviceType: ClusterIP
   annotations:
